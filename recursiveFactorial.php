@@ -1,14 +1,30 @@
-<?php 
-function factorial($n) {
-	if($n == 0) {
-		return 1;
-	} else {
-		return $n * factorial($n - 1);
+<?php
+if(isset($_POST['number'])) {
+	$fact = $_POST['number'];
+	 
+	function factorial($n) {
+		if($n == 0) {
+			return 1;
+		} else {
+			return $n * factorial($n - 1);
+		}
 	}
+	
+	$ans = factorial($fact);
 }
-
-$fact = 1000; // Number whose factorial we're deriving
-
-echo "Factorial of $fact is: " . factorial($fact);
-
 ?>
+<html>
+	<body>
+		<form action="" method="POST">
+			<label>Enter a number to factorize: </label>
+			<input type="text" name="number" />
+			<input type="submit" />
+		</form>
+		<hr />
+		<?php
+			if(isset($ans)) {
+				echo "Factorial of $fact is: ". $ans;
+			}
+		?>
+	</body>
+</html>

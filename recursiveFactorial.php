@@ -17,7 +17,9 @@ if(isset($_POST['number'])) {
 	<body>
 		<form action="" method="POST">
 			<label>Enter a number to factorize: </label>
+			<br />
 			<input type="text" name="number" />
+			<br />
 			<input type="submit" />
 		</form>
 		<hr />

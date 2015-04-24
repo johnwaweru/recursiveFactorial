@@ -16,10 +16,10 @@ if(isset($_POST['number'])) {
 <html>
 	<body>
 		<form action="" method="POST">
-			<label>Enter a number to factorize: </label>
-			<br />
-			<input type="text" name="number" />
-			<br />
+			<label for="number">Enter a number to factorize (Btn 0 - 170): </label>
+			<br /><br />
+			<input type="text" name="number" id="number" />
+			<br /><br />
 			<input type="submit" />
 		</form>
 		<hr />
